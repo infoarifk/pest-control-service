@@ -52,9 +52,9 @@ const RegisterCom = () => {
                                 <div className="flex items-start mb-6">
 
                                     <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Already have an account?
-                                        <Link to="/SignIn" className="text-[#a02013] dark:text-[#a02013] ml-1">Sign in here</Link></label>
+                                        <Link to="/SignIn" className="text-[#a02013] dark:text-[#a02013] ml-1">Sign in</Link></label>
                                 </div>
-                                <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Submit</button>
+                                <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Register</button>
                             </form>
 
                         </div>
