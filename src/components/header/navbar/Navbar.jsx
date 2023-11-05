@@ -14,7 +14,7 @@ const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <a href="" className="mr-6 text-sm  text-[#a02013] font-bold">(+880) 412-1234</a>
                         <Link to="Register" className="text-sm  text-white border bg-[#a02013] px-3 py-2 rounded-md font-semibold ">Register</Link>
-                        <a href="#" className="text-sm  text-white border bg-[#a02013] px-3 py-2 rounded-md font-semibold ">Sign in</a>
+                        <Link to="/SignIn" className="text-sm  text-white border bg-[#a02013] px-3 py-2 rounded-md font-semibold ">Sign in</Link>
                         
                         
                     </div>
