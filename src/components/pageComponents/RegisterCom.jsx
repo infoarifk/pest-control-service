@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 
 
 const RegisterCom = () => {
+
+
+
     return (
+
         <div className="max-w-[500px] mx-auto px-5">
 
-
-
-            <form className="mt-28">
+            <form className="my-28">
                 <h2 className="bg-red-700">Register Here</h2>
                 <div className="grid gap-6 mb-6 md:grid-cols-2">
                     <div>
@@ -16,7 +18,7 @@ const RegisterCom = () => {
                     </div>
                     <div>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone No.</label>
-                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+880xxxxxxxxx" required />
+                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="(+880) xxxxxxxxx" required />
                     </div>
 
                 </div>
