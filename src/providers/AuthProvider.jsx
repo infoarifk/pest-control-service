@@ -15,7 +15,18 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     
 
-    useEffect(() => {
+    //google Sign in
+      const signInWithGoogle = async () => {
+        
+        try {
+          await signInWithPopup(auth,provider);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+
+      useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (authUser) => {
           if (authUser) {
             setUser(authUser);
@@ -28,14 +39,6 @@ const AuthProvider = ({children}) => {
         return () => unsubscribe();
       }, []);
 
-      const signInWithGoogle = async () => {
-        
-        try {
-          await signInWithPopup(auth,provider);
-        } catch (error) {
-          console.error(error);
-        }
-      };
 
 
 
