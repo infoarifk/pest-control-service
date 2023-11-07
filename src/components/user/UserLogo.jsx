@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useAuthContext } from "../../providers/AuthProvider";
 
 const UserLogo = () => {
-    const { user } = useAuthContext();
+    const { user,logOut } = useAuthContext();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -38,7 +38,7 @@ const UserLogo = () => {
                             <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
                         </li>
                         <li>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover.bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                            <button onClick={logOut} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover.bg-gray-600 dark:text-gray-200 dark:hover:text-white w-full">Sign out</button>
                         </li>
                     </ul>
                 </div>
