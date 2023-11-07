@@ -4,12 +4,12 @@ import StarReview from "./StarReview";
 const CustomerReview = () => {
     return (
         <div className="px-4">
-            <div className="max-w-[1220px] mx-auto border-l-8 border-[#a02013] mb-10">
+            <div className="max-w-[1220px] mx-auto border-l-8 border-[#a02013] mb-10" data-aos="zoom-in-right">
                 <h1 className="ml-4 text-3xl font-bold">People Review Us</h1>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1220px] mx-auto mb-8 md:mb-12 gap-6">
-                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto">
+                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto" data-aos="zoom-out-up">
                     <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
                         <div className="flex justify-center">
                             <StarReview></StarReview>
@@ -24,7 +24,7 @@ const CustomerReview = () => {
                         </div>
                     </figcaption>
                 </figure>
-                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto">
+                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto" data-aos="zoom-out-up">
                     <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
                         <div className="flex justify-center">
                             <StarReview></StarReview>
@@ -39,7 +39,7 @@ const CustomerReview = () => {
                         </div>
                     </figcaption>
                 </figure>
-                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto">
+                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto" data-aos="zoom-out-up">
                     <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
                         <div className="flex justify-center">
                             <StarReview></StarReview>
@@ -54,7 +54,7 @@ const CustomerReview = () => {
                         </div>
                     </figcaption>
                 </figure>
-                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto">
+                <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border-2 border-[#a02013] rounded-md shadow-gray-400 shadow-md w-[80%] mx-auto" data-aos="zoom-out-up">
                     <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
                         <div className="flex justify-center">
                             <StarReview></StarReview>

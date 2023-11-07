@@ -3,7 +3,7 @@
 const Aboutus = () => {
     return (
         <div className="px-4">
-            <div className="max-w-[1220px] mx-auto border-l-8 border-[#a02013] mb-6">
+            <div className="max-w-[1220px] mx-auto border-l-8 border-[#a02013] mb-6 " data-aos="zoom-in-right">
                 <h1 className="ml-4 text-3xl font-bold"> About Us</h1>
             </div>
             <div className="flex flex-col md:flex-row justify-center gap-8 max-w-[1220px] mx-auto">
@@ -25,7 +25,7 @@ const Aboutus = () => {
 
                 </div>
 
-                <div>
+                <div data-aos="zoom-in-right">
                     <img className="rounded-sm" src="/src/assets/images/about1.jpg" alt="" />
 
                 </div>

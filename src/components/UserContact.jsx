@@ -2,7 +2,9 @@ import { BsFillPersonLinesFill,BsFillTelephoneFill,BsFillHouseGearFill } from "r
 
 const UserContact = () => {
     return (
-        <div>
+        <div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             
             <div className="max-w-[980px] mx-auto bg-[#a02013] py-10 px-10 rounded-sm">
                     <h2 className="text-center text-xl font-bold text-white mb-5">We will contact you</h2>
