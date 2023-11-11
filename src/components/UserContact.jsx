@@ -1,4 +1,5 @@
 import { BsFillPersonLinesFill, BsFillTelephoneFill, BsFillHouseGearFill } from "react-icons/bs";
+import toast, { Toaster } from 'react-hot-toast';
 
 const UserContact = () => {
 
@@ -24,25 +25,14 @@ const UserContact = () => {
             .then(res => res.json())
             .then(data => {
 
-                console.log(data);
+                //console.log(data);
 
                 if(data.insertedId){
-                    alert('ok');
+                    toast.success('Successfully send');
                 }
             });
-
-           
-
-        
+     
         form.reset();
-
-        
-
-
-
-
-
-
 
     }
 
@@ -84,6 +74,7 @@ const UserContact = () => {
                     </div>
 
                     <input type="submit" value="Send Us" className="py-4 px-6 text-[#a02013] font-semibold bg-white mt-[28px] rounded-sm" />
+                    <Toaster></Toaster>
 
 
 
