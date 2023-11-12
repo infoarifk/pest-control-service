@@ -1,10 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-
-
-
-
+import { updateProfile } from "firebase/auth";
+import { auth } from "../../config/firebase.config";
 
 
 const RegisterCom = () => {
@@ -30,18 +29,17 @@ const RegisterCom = () => {
         signUpWithEmail(email, password)
         .then(result =>{
 
-            console.log(result);
-            
+            //console.log(result);     
             navigate(location?.state ? location.state : '/' );
 
+            updateProfile(auth.currentUser, {
+
+                displayName: name, photoURL: photoURL, phoneNumber: phone
+
+              })
+          
         })
         
-        
-        
-
-
-
-
     }
 
     return (

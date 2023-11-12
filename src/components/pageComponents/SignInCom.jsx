@@ -11,37 +11,37 @@ import toast, { Toaster } from "react-hot-toast";
 const SignInCom = () => {
 
 
-const {user, signInWithGoogle, loginWithEmail} = useContext(AuthContext);
+    const { user, signInWithGoogle, loginWithEmail } = useContext(AuthContext);
 
-const location = useLocation();
-const navigate = useNavigate();
+    const location = useLocation();
+    const navigate = useNavigate();
 
-const handleGoogleSignin = ()=>{
-    signInWithGoogle()
-    .then( result =>{
-        navigate(location?.state ? location.state : '/' );
-        toast.success('Login successful!');
-    });
+    const handleGoogleSignin = () => {
+        signInWithGoogle()
+            .then(result => {
+                navigate(location?.state ? location.state : '/');
+                toast.success('Login successful!');
+            });
 
-}
+    }
 
-const handleEmailPassLogin = (e)=>{
-e.preventDefault();
+    const handleEmailPassLogin = (e) => {
+        e.preventDefault();
 
-const form = e.target;
-const email = form.email.value;
-const password = form.password.value;
-loginWithEmail(email, password)
-.then(result =>{
-    navigate(location?.state ? location.state : '/' );
-    toast.success('Login successful!');
-})
-
-
-}
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        loginWithEmail(email, password)
+            .then(result => {
+                navigate(location?.state ? location.state : '/');
+                toast.success('Login successful!');
+            })
 
 
-    
+    }
+
+
+
     return (
         <div>
             <section className="bg-gray-50 dark:bg-gray-900">
@@ -57,8 +57,8 @@ loginWithEmail(email, password)
                             <button onClick={handleGoogleSignin} className="flex justify-center gap-2 items-center w-full border py-1 rounded-lg font-semibold text-lg">
                                 <FcGoogle className="w-8 h-8"></FcGoogle>
                                 Sign in with Google</button>
-                                <Toaster></Toaster>
-                                
+                            <Toaster></Toaster>
+
 
                             <form onSubmit={handleEmailPassLogin} className="space-y-4 md:space-y-6">
                                 <div>
