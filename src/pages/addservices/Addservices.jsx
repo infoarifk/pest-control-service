@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 
@@ -12,7 +13,7 @@ const Addservices = () => {
         return <p className="text-center">Loading...</p>;
     }
     const providerID = user.uid;
-    //console.log(providerID);
+    
 
     const handleAddProduct =(e)=>{
         e.preventDefault();
@@ -27,7 +28,28 @@ const Addservices = () => {
         const area = form.area.value;
 
         const addedService = {serviceName, serviceImg, providerName, providerMail, description, price, area, providerID};
-        console.log(addedService);
+        //console.log(addedService);
+
+        fetch('http://localhost:5000/services', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(addedService),
+
+
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                //console.log(data);
+
+                if(data.insertedId){
+                    toast.success('Successfully added');
+                }
+            });
+     
+        form.reset();
 
 
 
@@ -79,7 +101,7 @@ const Addservices = () => {
                                 
         
                                 <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Add Service</button>
-                              
+                              <Toaster></Toaster>
 
                                 
                             </form>
