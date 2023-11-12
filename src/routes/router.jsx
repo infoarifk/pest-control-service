@@ -6,6 +6,8 @@ import Register from "../pages/register/Register";
 import Addservices from "../pages/addservices/Addservices";
 import Services from "../pages/services/Services";
 import Team from "../pages/team/Team";
+import ManageServices from "../pages/manage/ManageServices";
+import Schedule from "../pages/schedule/Schedule";
 
 
 
@@ -18,7 +20,8 @@ const router = createBrowserRouter([
     children: [
         {
             path: "/",
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch('http://localhost:5000/services')
         },
         {
             path: "/addservices",
@@ -32,6 +35,14 @@ const router = createBrowserRouter([
         {
             path: "/team",
             element: <Team></Team>
+        },
+        {
+            path: "/manage",
+            element: <ManageServices></ManageServices>
+        },
+        {
+            path: "/schedule",
+            element: <Schedule></Schedule>
         }
 
     ]
