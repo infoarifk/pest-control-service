@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useAuthContext } from "../../providers/AuthProvider";
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const UserLogo = () => {
-    const { user,logOut } = useAuthContext();
+    const { user,logOut } = useContext(AuthContext);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {

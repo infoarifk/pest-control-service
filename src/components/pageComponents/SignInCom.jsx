@@ -1,21 +1,42 @@
 /* eslint-disable no-unused-vars */
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useAuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
+
+
 
 
 const SignInCom = () => {
 
 
-const {user, signInWithGoogle} = useAuthContext();
+const {user, signInWithGoogle, loginWithEmail} = useContext(AuthContext);
+
 const location = useLocation();
 const navigate = useNavigate();
 
 const handleGoogleSignin = ()=>{
     signInWithGoogle()
     .then( result =>{
-        navigate(location?.state ? location.state : '/' )
+        navigate(location?.state ? location.state : '/' );
+        toast.success('Login successful!');
     });
+
+}
+
+const handleEmailPassLogin = (e)=>{
+e.preventDefault();
+
+const form = e.target;
+const email = form.email.value;
+const password = form.password.value;
+loginWithEmail(email, password)
+.then(result =>{
+    navigate(location?.state ? location.state : '/' );
+    toast.success('Login successful!');
+})
+
 
 }
 
@@ -36,9 +57,10 @@ const handleGoogleSignin = ()=>{
                             <button onClick={handleGoogleSignin} className="flex justify-center gap-2 items-center w-full border py-1 rounded-lg font-semibold text-lg">
                                 <FcGoogle className="w-8 h-8"></FcGoogle>
                                 Sign in with Google</button>
+                                <Toaster></Toaster>
+                                
 
-
-                            <form className="space-y-4 md:space-y-6">
+                            <form onSubmit={handleEmailPassLogin} className="space-y-4 md:space-y-6">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                                     <input type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" placeholder="name@company.com" required />
@@ -50,6 +72,7 @@ const handleGoogleSignin = ()=>{
 
 
                                 <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Sign in</button>
+                                <Toaster></Toaster>
 
                                 <p className="text-sm font-semibold text-gray-900 dark:text-gray-900">
                                     Do not have an account yet? <Link to="/Register" className="font-semibold text-[#a02013] dark:text-primary-500">Register</Link>
