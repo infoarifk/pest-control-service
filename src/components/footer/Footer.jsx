@@ -14,19 +14,16 @@ const Footer = () => {
                             <h3 className="text-center text-2xl font-bold  text-black ">PEST<span className="text-[#a02013]">solution</span></h3>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Links</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Discord Server</a>
+                                    <Link to="/" className="hover:text-[#a02013]">Home</Link>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Twitter</a>
+                                <Link to="/services" className="hover:text-[#a02013]">Services</Link>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Facebook</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Contact Us</a>
+                                <Link to="/team" className="hover:text-[#a02013]">Our Team</Link>
                                 </li>
                             </ul>
                         </div>
@@ -34,13 +31,13 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Privacy Policy</a>
+                                    <a href="#" className="hover:text-[#a02013]">Privacy Policy</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Licensing</a>
+                                    <a href="#" className="hover:text-[#a02013]">Licensing</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                    <a href="#" className="hover:text-[#a02013]">Terms &amp; Conditions</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,17 +45,13 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">iOS</a>
+                                    <a href="#" className="hover:text-[#a02013]">iOS</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Android</a>
+                                    <a href="#" className="hover:text-[#a02013]">Android</a>
                                 </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">Windows</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline">MacOS</a>
-                                </li>
+                                
+                                
                             </ul>
                         </div>
                     </div>

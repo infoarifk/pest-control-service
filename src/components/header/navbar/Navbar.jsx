@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import UserLogo from "../../user/UserLogo";
@@ -42,17 +42,36 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
                             <li>
-                                <a href="#" className="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                            <NavLink
+                                to="/"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-[#a02013] font-bold" : ""
+                                }
+                            >
+                                Home
+                            </NavLink>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-900 dark:text-white hover:underline">Company</a>
+                            <NavLink
+                                to="/services"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-[#a02013] font-bold" : ""
+                                }
+                            >
+                                Services
+                            </NavLink>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-900 dark:text-white hover:underline">Team</a>
+                            <NavLink
+                                to="/team"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-[#a02013] font-bold" : ""
+                                }
+                            >
+                                Our Team
+                            </NavLink>
                             </li>
-                            <li>
-                                <a href="#" className="text-gray-900 dark:text-white hover:underline">Features</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ const Banner = () => {
                     <h1>we are <span className="font-bold">Expart</span></h1>
                     <h1>in pest control</h1>
                     <p className="text-lg mt-5">keep your places clean from bad organism</p>
-                    <Link to="/"><button className="bg-[#a02013] text-white text-lg px-2 py-1 rounded-sm">Explore Services</button></Link>
+                    <Link to="/services"><button className="bg-[#a02013] text-white text-lg px-2 py-1 rounded-sm">Explore Services</button></Link>
                 </div>
 
 
