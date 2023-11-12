@@ -12,7 +12,29 @@ const Addservices = () => {
         return <p className="text-center">Loading...</p>;
     }
     const providerID = user.uid;
-    console.log(providerID);
+    //console.log(providerID);
+
+    const handleAddProduct =(e)=>{
+        e.preventDefault();
+
+        const form = e.target;
+        const serviceName = form.name.value;
+        const serviceImg = form.photoURL.value;
+        const providerName = form.provider.value;
+        const providerMail = form.providerEmail.value;
+        const description = form.description.value;
+        const price = form.price.value;
+        const area = form.area.value;
+
+        const addedService = {serviceName, serviceImg, providerName, providerMail, description, price, area, providerID};
+        console.log(addedService);
+
+
+
+
+
+    } 
+
 
     return (
         <div>
@@ -24,7 +46,7 @@ const Addservices = () => {
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                            
-                            <form  className="space-y-4 md:space-y-6">
+                            <form onSubmit={handleAddProduct} className="space-y-4 md:space-y-6">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Name:</label>
                                     <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" placeholder="name your service" required />
@@ -39,7 +61,7 @@ const Addservices = () => {
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email:</label>
-                                    <input type="email" name="provider" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.email || ""} readOnly/>
+                                    <input type="email" name="providerEmail" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.email || ""} readOnly/>
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Description:</label>

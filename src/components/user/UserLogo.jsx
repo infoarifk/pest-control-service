@@ -1,15 +1,24 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 import { AuthContext } from '../../providers/AuthProvider';
 
 const UserLogo = () => {
-    const { user,logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
+    const handleLogOut = () => {
 
+        logOut();
+        navigate('/');
+
+
+    }
     return (
         <div className="flex items-center md:order-2">
             <button
@@ -39,7 +48,7 @@ const UserLogo = () => {
                             <Link to="/myschedule" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">My schedule</Link>
                         </li>
                         <li>
-                            <button onClick={logOut} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover.bg-gray-600 dark:text-gray-200 dark:hover:text-white w-full">Sign out</button>
+                            <button onClick={handleLogOut} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover.bg-gray-600 dark:text-gray-200 dark:hover:text-white w-full">Sign out</button>
                         </li>
                     </ul>
                 </div>
