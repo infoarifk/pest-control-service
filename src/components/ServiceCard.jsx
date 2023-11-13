@@ -1,25 +1,37 @@
+/* eslint-disable react/prop-types */
 
 
 const ServiceCard = ({ service }) => {
 
 
-    const { serviceName, serviceImg, description } = service;
+    const { serviceName, serviceImg, providerName, providerImg, description, price, area } = service;
 
     return (
 
 
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img className="rounded-t-lg" src={serviceImg} alt="" />
-            </a>
+        <div className="max-w-[340px] mx-auto bg-white border border-gray-200 rounded-sm shadow dark:bg-gray-800 dark:border-gray-700" data-aos="zoom-out-up">
+
+            <img className="rounded-t-sm" src={serviceImg} alt="" />
+
             <div className="p-5">
-                <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{serviceName}</h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                </a>
+
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{serviceName}</h5>
+
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description.slice(0, 100)}...</p>
+                <p className="font-semibold">Service provider:</p>
+                <div className="flex items-center my-4 gap-3">
+                    <img className="w-9 h-9 rounded-sm" src={providerImg} alt="Provider Img" />
+                    <p>{providerName}</p>
+                </div>
+                <p className="font-medium text-lg mb-4">Price: {price} tk.</p>
+                <div className="flex justify-between items-center mb-3">
+                        <p className="font-light text-sm">Service area:</p>
+                        <p className="font-light text-sm">{area}</p>
+                </div>
+
+                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
+                    View details
+                </button>
             </div>
         </div>
 

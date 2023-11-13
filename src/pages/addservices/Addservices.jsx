@@ -13,6 +13,7 @@ const Addservices = () => {
         return <p className="text-center">Loading...</p>;
     }
     const providerID = user.uid;
+    const providerImg = user.photoURL;
     
 
     const handleAddProduct =(e)=>{
@@ -27,7 +28,7 @@ const Addservices = () => {
         const price = form.price.value;
         const area = form.area.value;
 
-        const addedService = {serviceName, serviceImg, providerName, providerMail, description, price, area, providerID};
+        const addedService = {serviceName, serviceImg, providerName, providerImg, providerMail, description, price, area, providerID};
         //console.log(addedService);
 
         fetch('http://localhost:5000/services', {
