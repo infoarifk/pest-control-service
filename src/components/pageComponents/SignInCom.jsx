@@ -71,7 +71,7 @@ const SignInCom = () => {
                                 </div>
 
 
-                                <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Sign in</button>
+                                <button type="submit" className="text-white bg-[#a02013] hover:bg-rose-600 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Sign in</button>
                                 <Toaster></Toaster>
 
                                 <p className="text-sm font-semibold text-gray-900 dark:text-gray-900">

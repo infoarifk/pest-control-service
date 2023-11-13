@@ -12,15 +12,12 @@ const Aboutus = () => {
                     <p className="text-gray-600">Pest Solution is the leading provider of pest control in Bangladesh. Pest Solution was founded in 2003 with the objective to meet the need for professional pest control services in this country.
 
                         We are specialized in exterminating a variety of termites and insects including bed bugs, cockroaches, rodents and other pests. We are focused on high standards and affordability of customer service without sacrificing quality in pest services.</p> <br />
-                        <p className="text-right font-semibold hidden lg:block">
+                        <p className="text-right font-semibold hidden lg:block text-white bg-[#a02013] pr-4 py-4 rounded-sm hover:bg-rose-600" data-aos="flip-up">
                             Address: <br />
                             House 62/11 <br />
                             Road No. #2 <br />
                             Baridhara #J Block <br />
                             Dhaka-1212.
-
-
-
                         </p>
 
                 </div>
