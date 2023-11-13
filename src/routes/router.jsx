@@ -9,6 +9,7 @@ import Team from "../pages/team/Team";
 import ManageServices from "../pages/manage/ManageServices";
 import Schedule from "../pages/schedule/Schedule";
 import UpdateService from "../pages/updateservice/UpdateService";
+import Details from "../pages/detailspage/Details";
 
 
 
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
             element: <UpdateService></UpdateService>,
             loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
 
+        },
+        {
+            path: "/details/:id",
+            element: <Details></Details>,
+            loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
         }
 
     ]

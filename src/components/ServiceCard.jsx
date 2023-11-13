@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const ServiceCard = ({ service }) => {
 
 
-    const { serviceName, serviceImg, providerName, providerImg, description, price, area } = service;
+    const { _id, serviceName, serviceImg, providerName, providerImg, description, price, area } = service;
 
     return (
 
@@ -29,9 +31,9 @@ const ServiceCard = ({ service }) => {
                         <p className="font-light text-sm">{area}</p>
                 </div>
 
-                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
+                <Link to={`/details/${_id}`}><button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
                     View details
-                </button>
+                </button></Link>
             </div>
         </div>
 
