@@ -11,7 +11,7 @@ const ServiceCard = ({ service }) => {
 
         <div className="max-w-[340px] mx-auto bg-white border border-gray-200 rounded-sm shadow dark:bg-gray-800 dark:border-gray-700" data-aos="zoom-out-up">
 
-            <img className="rounded-t-sm" src={serviceImg} alt="" />
+            <img className="rounded-t-sm w-[100%] h-[200px]" src={serviceImg} alt="" />
 
             <div className="p-5">
 

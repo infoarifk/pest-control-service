@@ -2,7 +2,7 @@
 
 
 const ManageServiceComp = ({service}) => {
-    const { serviceName, serviceImg, providerName, providerImg, description, price, area } = service;
+    const { serviceName, serviceImg, description, price, area } = service;
 
     return (
 
@@ -23,9 +23,15 @@ const ManageServiceComp = ({service}) => {
                         <p className="font-light text-sm">{area}</p>
                 </div>
 
-                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
-                    View details
+                <div className="flex justify-center gap-4">
+                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-emerald-700 rounded-sm hover:bg-green-500">
+                    Edit
                 </button>
+
+                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
+                    Delete
+                </button>
+                </div>
             </div>
         </div>
 
