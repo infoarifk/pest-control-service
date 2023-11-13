@@ -9,11 +9,13 @@ const ManageServices = () => {
   const { user } = useContext(AuthContext);
   const [filterServices, setServices] = useState([]);
 
+
   useEffect(() => {
-  
     const filtered = services.filter((service) => service.providerID === user.uid);
     setServices(filtered);
   }, [services, user.uid]);
+
+
 
   return (
     <div>
