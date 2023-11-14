@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 
+
 const Banner = () => {
     const customBg = {
 
-        backgroundImage: 'url("/src/assets/images/banner.jpeg")',
+        backgroundImage: 'url("https://hybridpestcontrol.com/storage/2021/07/Commercial-and-Residential-Pest-control-UT-hybridpestcontrol-scaled-2560x1280.jpeg")',
         backgroundSize: 'cover',
         backgroundColor: 'rgba(0, 0, 0, 0.2)'
 
