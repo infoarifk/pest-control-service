@@ -23,7 +23,7 @@ const ManageServices = () => {
       }, [services, user]);
 
       if(filterServices<1){
-        return <h3 className="text-center text-3xl text-gray-400 font-bold mt-10">You have no Booking yet</h3>
+        return <h3 className="text-center text-3xl text-gray-400 font-bold mt-10">You have no Available services</h3>
     }
 
 
