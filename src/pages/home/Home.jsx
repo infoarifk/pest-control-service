@@ -11,6 +11,7 @@ const Home = () => {
 
     const services = useLoaderData();
     const displayServices =services.slice(0, 4);
+    
 
     return (
         <div className="space-y-16">

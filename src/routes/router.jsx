@@ -84,7 +84,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/schedule/orders",
-                element: <Orders></Orders>
+                element: <Orders></Orders>,
+                loader: ()=> fetch('http://localhost:5000/bookings')
             }
 
         ]
