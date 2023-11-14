@@ -47,7 +47,7 @@ const RegisterCom = () => {
         <div>
             <section className="bg-gray-50 dark:bg-gray-900">
 
-                <div className="flex flex-col items-center justify-center px-2 py-8 mx-auto md:h-screen lg:py-0">
+                <div className="flex flex-col items-center justify-center px-2 py-8 mx-auto  lg:py-0">
 
                     <img className="w-16 h-12 mr-2" src="/src/assets/logo/logo.png" alt="logo" />
                     <h3 className="text-2xl font-bold mb-6">PEST<span className="text-[#a02013]">solution</span></h3>

@@ -9,6 +9,7 @@ import Popup from "../../components/Popup";
 const Details = () => {
 
     const service = useLoaderData();
+    
     const { user } = useContext(AuthContext);
     const [isModalOpen, setModalOpen] = useState(false);
     const { _id, providerName, providerMail, providerImg, serviceName, serviceImg, description, price, area, providerID } = service;

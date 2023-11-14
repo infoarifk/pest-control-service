@@ -13,6 +13,7 @@ import Details from "../pages/detailspage/Details";
 import MyBookings from "../pages/mybookings/MyBookings";
 import Orders from "../pages/orders/Orders";
 import SceduleLayout from "../layout/SceduleLayout";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/details/:id",
-                element: <Details></Details>,
+                element: <PrivateRouter><Details></Details></PrivateRouter>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             }
 

@@ -56,8 +56,7 @@ const AuthProvider = ({children}) => {
           if (authUser) {
             setUser(authUser);
             
-            console.log(authUser);
-
+           
           } else {
             setUser(null);
           }

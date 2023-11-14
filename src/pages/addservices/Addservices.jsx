@@ -9,14 +9,14 @@ const Addservices = () => {
     const { user } = useContext(AuthContext);
 
     if (!user) {
-        
+
         return <p className="text-center">Loading...</p>;
     }
     const providerID = user.uid;
     const providerImg = user.photoURL;
-    
 
-    const handleAddProduct =(e)=>{
+
+    const handleAddProduct = (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -28,7 +28,7 @@ const Addservices = () => {
         const price = form.price.value;
         const area = form.area.value;
 
-        const addedService = {serviceName, serviceImg, providerName, providerImg, providerMail, description, price, area, providerID};
+        const addedService = { serviceName, serviceImg, providerName, providerImg, providerMail, description, price, area, providerID };
         //console.log(addedService);
 
         fetch('http://localhost:5000/services', {
@@ -45,30 +45,30 @@ const Addservices = () => {
 
                 //console.log(data);
 
-                if(data.insertedId){
+                if (data.insertedId) {
                     toast.success('Successfully added');
                 }
             });
-     
+
         form.reset();
 
 
 
 
 
-    } 
+    }
 
 
     return (
         <div>
             <section className="mt-10">
                 <div className="flex flex-col items-center justify-center px-2 py-8 mx-auto  lg:py-0">
-                    
+
                     <h3 className="text-2xl font-bold mb-6">Add Your Service</h3>
 
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                           
+
                             <form onSubmit={handleAddProduct} className="space-y-4 md:space-y-6">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Name:</label>
@@ -80,11 +80,11 @@ const Addservices = () => {
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name:</label>
-                                    <input type="text" name="provider" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.displayName || ""}  readOnly />
+                                    <input type="text" name="provider" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.displayName || ""} readOnly />
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email:</label>
-                                    <input type="email" name="providerEmail" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.email || ""} readOnly/>
+                                    <input type="email" name="providerEmail" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" value={user.email || ""} readOnly />
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Description:</label>
@@ -98,13 +98,13 @@ const Addservices = () => {
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Area:</label>
                                     <input type="text" name="area" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#a02013] focus:border-[#a02013] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#a02013] dark:focus:border-[#a02013]" placeholder="your service area" required />
                                 </div>
-                                
-                                
-        
-                                <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Add Service</button>
-                              <Toaster></Toaster>
 
-                                
+
+
+                                <button type="submit" className="text-white bg-[#a02013] hover:bg-[#a02013] focus:ring-4 focus:outline-none focus:ring-[#a02013] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-[#a02013] dark:hover:bg-[#a02013] dark:focus:ring-[#a02013]">Add Service</button>
+                                <Toaster></Toaster>
+
+
                             </form>
                         </div>
                     </div>
