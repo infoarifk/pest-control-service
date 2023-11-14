@@ -1,20 +1,47 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import { useState } from "react";
 
 
-const Popup = ({ isOpen, onClose }) => {
+import toast from "react-hot-toast";
+import { AiOutlineClose } from "react-icons/ai";
 
-    const [formData, setFormData] = useState({
-        // Your form fields here
-    });
+const Popup = ({ isOpen, onClose, userMail, providerMail, serviceName, price, area }) => {
 
-    const handleInputChange = (e) => {
-        // Handle form field changes
-    };
-
+  
+    const customerMail = userMail;
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission
+        const form = e.target;
+        const instruction = form.instruction.value;
+        const date = form.date.value;
+        const status = "pending";
+
+        const confirmBooking = {customerMail, providerMail, serviceName, price, area, date, instruction, status }
+
+        //console.log(confirmBooking);
+
+
+        fetch('http://localhost:5000/bookings', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(confirmBooking),
+
+
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                //console.log(data);
+
+                if(data.insertedId){
+                    toast.success('Your Booking is confirmed');
+                }
+            });
+
+            form.reset();
+        
     };
 
     return (
@@ -27,12 +54,10 @@ const Popup = ({ isOpen, onClose }) => {
                         <h3 className="text-3xl font-light text-white">
                             Confirm your Booking
                         </h3>
-                        <button onClick={onClose} type="button" className="end-2.5 text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center hover:bg-rose-600" data-modal-hide="authentication-modal"> 
+                        <button onClick={onClose} type="button" className="end-2.5 text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center hover:bg-rose-600" data-modal-hide="authentication-modal">
 
-                            <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                            </svg>
-                            
+                            <AiOutlineClose className="text-lg"></AiOutlineClose>
+
                         </button>
                     </div>
 
@@ -41,31 +66,32 @@ const Popup = ({ isOpen, onClose }) => {
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Service Name</label>
-                                <input type="text" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly/>
+                                <input type="text" name="serviceName" value={serviceName} className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly />
                             </div>
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Provider Email</label>
-                                <input type="email" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly/>
+                                <input type="email" name="providerMail" value={providerMail} className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly />
                             </div>
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Your Email</label>
-                                <input type="email" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly/>
+                                <input type="email" name="userMail" value={userMail} className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly />
                             </div>
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Date</label>
-                                <input type="date" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5"/>
+                                <input type="date" name="date" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" required />
                             </div>
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Special instruction</label>
-                                <textarea type="text" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5"/>
+                                <textarea type="text" name="instruction" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" />
                             </div>
                             <div>
                                 <label className="block mb-2 text-sm font-normal text-white">Price</label>
-                                <input type="text" name="" className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly/>
+                                <input type="text" name="price" value={price} className=" text-gray-900 focus:border-rose-500 focus:ring-rose-500 text-sm rounded-sm block w-full p-2.5" readOnly />
                             </div>
-                          
+
                             <button type="submit" className="w-full text-white bg-rose-500 hover:bg-rose-600 font-medium rounded-sm text-sm px-5 py-2.5 text-center ">Confirm</button>
                             
+
                         </form>
                     </div>
                 </div>

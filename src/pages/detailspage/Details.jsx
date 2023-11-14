@@ -11,11 +11,13 @@ const Details = () => {
     const service = useLoaderData();
     const { user } = useContext(AuthContext);
     const [isModalOpen, setModalOpen] = useState(false);
-    const { _id, providerName, providerImg, serviceName, serviceImg, description, price, area, providerID } = service;
+    const { _id, providerName, providerMail, providerImg, serviceName, serviceImg, description, price, area, providerID } = service;
     if (!user) {
 
         return <p className="text-center">Loading...</p>;
     }
+
+    
     
 
 
@@ -54,7 +56,8 @@ const Details = () => {
                 </div>
 
                 
-                <Popup isOpen={isModalOpen} onClose={handleCloseModal}></Popup>
+                <Popup isOpen={isModalOpen} onClose={handleCloseModal} userMail={user.email} providerMail={providerMail}
+                serviceName={serviceName} price={price} area={area}></Popup>
                 <button onClick={handleBookNow} className="px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600 w-[30%] flex justify-center mx-auto mt-8">
                     Book Now
                 </button>
