@@ -3,6 +3,7 @@ import { useContext, useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import ManageServiceComp from "../../components/ManageServiceComp";
+import { Toaster } from "react-hot-toast";
 
 const ManageServices = () => {
     const services = useLoaderData();
@@ -30,6 +31,7 @@ const ManageServices = () => {
                     <ManageServiceComp key={service._id} service={service}></ManageServiceComp>
                 ))}
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };

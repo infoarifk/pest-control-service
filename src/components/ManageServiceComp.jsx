@@ -1,11 +1,38 @@
 
 /* eslint-disable react/prop-types */
 
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 
 const ManageServiceComp = ({service}) => {
     const {_id, serviceName, serviceImg, description, price, area } = service;
+
+
+    const handleDelete = (id)=>{
+        fetch(`http://localhost:5000/services/${id}`, {
+      method: 'DELETE',
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then(data => {
+        if (data.deletedCount > 0) {
+            toast.success('Successfully deleted');
+          
+         
+        }
+      })
+      .catch(error => {
+        console.error('Error deleting user:', error);
+      });
+     
+
+        
+    }
 
     return (
 
@@ -31,9 +58,10 @@ const ManageServiceComp = ({service}) => {
                     Edit
                 </Link>
 
-                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
+                <button onClick={()=>handleDelete(service._id)} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#a02013] rounded-sm hover:bg-rose-600">
                     Delete
                 </button>
+                
                 </div>
             </div>
         </div>
