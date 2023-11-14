@@ -31,7 +31,7 @@ const Addservices = () => {
         const addedService = { serviceName, serviceImg, providerName, providerImg, providerMail, description, price, area, providerID };
         //console.log(addedService);
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

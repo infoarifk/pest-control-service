@@ -21,7 +21,7 @@ const Popup = ({ isOpen, onClose, userMail, providerMail, serviceName, price, ar
         //console.log(confirmBooking);
 
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/bookings', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

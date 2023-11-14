@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
             },
             {
                 path: "/addservices",
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             {
                 path: "/services",
                 element: <Services></Services>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
             },
             {
                 path: "/team",
@@ -46,19 +46,19 @@ const router = createBrowserRouter([
             {
                 path: "/manage",
                 element: <ManageServices></ManageServices>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
             },
 
             {
                 path: "/update/:id",
                 element: <UpdateService></UpdateService>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${params.id}`)
 
             },
             {
                 path: "/details/:id",
                 element: <PrivateRouter><Details></Details></PrivateRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${params.id}`)
             }
 
         ]
@@ -80,13 +80,13 @@ const router = createBrowserRouter([
             {
                 path: "/schedule",
                 element: <MyBookings></MyBookings>,
-                loader: ()=> fetch('http://localhost:5000/bookings')
+                loader: ()=> fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/bookings')
                 
             },
             {
                 path: "/schedule/orders",
                 element: <Orders></Orders>,
-                loader: ()=> fetch('http://localhost:5000/bookings')
+                loader: ()=> fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/bookings')
             }
 
         ]
