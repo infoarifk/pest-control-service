@@ -33,11 +33,11 @@ const Details = () => {
 
 
     return (
-        <div className="max-w-[60%] mt-8 mx-auto bg-white rounded-sm">
+        <div className="max-w-[60%] mt-8 mx-auto bg-white rounded-sm relative">
 
             <img className="rounded-t-sm w-[100%] h-[450px]" src={serviceImg} alt="" />
 
-            <div className="p-5 relative">
+            <div className="p-5">
 
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{serviceName}</h5>
 
