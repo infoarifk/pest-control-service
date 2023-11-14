@@ -23,7 +23,7 @@ const Details = () => {
 
     const handleBookNow = () => {
         if (providerID === user.uid) {
-            toast.error('You can not Book your own services');
+            return toast.error('You can not Book your own services');
         }
         setModalOpen(true);
 
