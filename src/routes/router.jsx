@@ -44,10 +44,7 @@ const router = createBrowserRouter([
             element: <ManageServices></ManageServices>,
             loader: ()=> fetch('http://localhost:5000/services')
         },
-        {
-            path: "/schedule",
-            element: <Schedule></Schedule>
-        },
+        
         {
             path: "/update/:id",
             element: <UpdateService></UpdateService>,
@@ -70,6 +67,10 @@ const router = createBrowserRouter([
 {
     path: "/Register",
     element: <Register></Register>,
+},
+{
+    path: "/schedule",
+    element: <Schedule></Schedule>
 }
 
 

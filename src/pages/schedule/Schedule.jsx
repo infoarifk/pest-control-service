@@ -1,11 +1,17 @@
+import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/header/navbar/Navbar";
 
 
 const Schedule = () => {
     return (
         <div>
-            <h1>rhis is Schedule page</h1>
+           <Navbar></Navbar> 
+           <Footer></Footer>
         </div>
     );
 };
 
 export default Schedule;
+
+
+
