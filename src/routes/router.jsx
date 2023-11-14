@@ -18,6 +18,7 @@ import PrivateRouter from "./PrivateRouter";
 
 
 
+
 const router = createBrowserRouter([
 
     {
@@ -66,7 +67,8 @@ const router = createBrowserRouter([
     },
     {
         path: "/SignIn",
-        element: <SignIn></SignIn>,
+        element: <SignIn></SignIn>
+        
     },
     {
         path: "/Register",
