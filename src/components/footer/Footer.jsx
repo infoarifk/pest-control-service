@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="mx-auto w-full max-w-screen-xl">
                     <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                         <div>
-                            <img className="w-[180px] mx-auto" src="/src/assets/logo/logo.png" alt="" />
+                            <img className="w-[180px] mx-auto" src="https://i.ibb.co/Pm47NvF/logo.png" alt="" />
                             <h3 className="text-center text-2xl font-bold  text-black ">PEST<span className="text-[#a02013]">solution</span></h3>
                         </div>
                         <div>

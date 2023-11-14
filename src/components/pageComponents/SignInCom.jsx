@@ -46,7 +46,7 @@ const SignInCom = () => {
         <div>
             <section className="bg-gray-50 dark:bg-gray-900">
                 <div className="flex flex-col items-center justify-center px-2 py-8 mx-auto  lg:py-0">
-                    <img className="w-16 h-12 mr-2" src="/src/assets/logo/logo.png" alt="logo" />
+                    <img className="w-16 h-12 mr-2" src="https://i.ibb.co/Pm47NvF/logo.png" alt="logo" />
                     <h3 className="text-2xl font-bold mb-6">PEST<span className="text-[#a02013]">solution</span></h3>
 
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

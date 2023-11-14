@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                     <Link to="/">
                         <div href="" className="flex items-center">
-                            <img src="/src/assets/logo/logo.png" className="h-8 mr-3" alt="" />
+                            <img src="https://i.ibb.co/Pm47NvF/logo.png" className="h-8 mr-3" alt="" />
                             <span className="self-center text-2xl font-bold whitespace-nowrap text-black ">PEST<span className="text-[#a02013]">solution</span></span>
                         </div>
                     </Link>

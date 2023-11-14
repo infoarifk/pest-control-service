@@ -23,7 +23,7 @@ const Aboutus = () => {
                 </div>
 
                 <div data-aos="zoom-in-right">
-                    <img className="rounded-sm" src="/src/assets/images/about1.jpg" alt="" />
+                    <img className="rounded-sm" src="https://i.ibb.co/2K2Kfgh/about1.jpg" alt="" />
 
                 </div>
 
