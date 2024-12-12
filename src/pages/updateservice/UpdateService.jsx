@@ -29,7 +29,7 @@ const UpdateService = () => {
         //console.log(updatedService);
         
 
-        fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${_id}`, {
+        fetch(`https://pest-control-server.vercel.app/services/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

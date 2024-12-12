@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
+                loader: () => fetch('https://pest-control-server.vercel.app/services')
             },
             {
                 path: "/addservices",
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: "/services",
                 element: <Services></Services>,
-                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
+                loader: () => fetch('https://pest-control-server.vercel.app/services')
             },
             {
                 path: "/team",
@@ -47,19 +47,19 @@ const router = createBrowserRouter([
             {
                 path: "/manage",
                 element: <ManageServices></ManageServices>,
-                loader: () => fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services')
+                loader: () => fetch('https://pest-control-server.vercel.app/services')
             },
 
             {
                 path: "/update/:id",
                 element: <UpdateService></UpdateService>,
-                loader: ({ params }) => fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://pest-control-server.vercel.app/services/${params.id}`)
 
             },
             {
                 path: "/details/:id",
                 element: <PrivateRouter><Details></Details></PrivateRouter>,
-                loader: ({ params }) => fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://pest-control-server.vercel.app/services/${params.id}`)
             }
 
         ]
@@ -82,13 +82,13 @@ const router = createBrowserRouter([
             {
                 path: "/schedule",
                 element: <MyBookings></MyBookings>,
-                loader: ()=> fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/bookings')
+                loader: ()=> fetch('https://pest-control-server.vercel.app/bookings')
                 
             },
             {
                 path: "/schedule/orders",
                 element: <Orders></Orders>,
-                loader: ()=> fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/bookings')
+                loader: ()=> fetch('https://pest-control-server.vercel.app/bookings')
             }
 
         ]
@@ -98,3 +98,5 @@ const router = createBrowserRouter([
 ])
 
 export default router;
+
+

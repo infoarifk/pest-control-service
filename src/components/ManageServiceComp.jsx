@@ -10,7 +10,7 @@ const ManageServiceComp = ({service}) => {
 
 
     const handleDelete = (id)=>{
-        fetch(`https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/services/${id}`, {
+        fetch(`https://pest-control-server.vercel.app/services/${id}`, {
       method: 'DELETE',
     })
       .then(res => {

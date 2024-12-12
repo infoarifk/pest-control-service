@@ -13,7 +13,7 @@ const UserContact = () => {
         const contactForm = { name, phone, address };
 
 
-        fetch('https://pest-control-server-mfmow33o2-infoarifs-projects.vercel.app/contacts', {
+        fetch('https://pest-control-server.vercel.app/contacts', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

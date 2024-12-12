@@ -30,7 +30,7 @@ const Navbar = () => {
                             <div className="flex items-center gap-1 md:gap-3">
 
                                 <p className="mr-6 text-sm  text-[#a02013] font-bold">(+880) 412-1234</p>
-                                <Link to="Register" className="text-sm  text-white border bg-[#a02013] px-2 md:px-3 py-1 md:py-2 rounded-sm font-semibold ">Register</Link>
+                                <Link to="/Register" className="text-sm  text-white border bg-[#a02013] px-2 md:px-3 py-1 md:py-2 rounded-sm font-semibold ">Register</Link>
                                 <Link to="/SignIn" className="text-sm  text-white border bg-[#a02013] px-2 md:px-3 py-1 md:py-2 rounded-sm font-semibold ">Sign in</Link>
 
                             </div>
