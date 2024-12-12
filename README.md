@@ -1,8 +1,8 @@
 # PESTsolution
 --------------------------------------------------------
 
-Live link: https://paste-control-web-app.web.app/
-Server side code: https://github.com/infoarifk/back-end-pest-control
+- **Live link:** https://paste-control-web-app.web.app/
+- **Server side code:** https://github.com/infoarifk/back-end-pest-control
 
 --------------------------------------------------------
 
